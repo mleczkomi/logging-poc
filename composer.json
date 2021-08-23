@@ -4,6 +4,7 @@
   "require": {
     "php": "^8.0.9",
     "ext-ctype": "*",
+    "ext-ds": "*",
     "ext-iconv": "*",
     "ext-json": "*",
     "ext-swoole": "*",
