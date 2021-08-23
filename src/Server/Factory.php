@@ -17,8 +17,6 @@ class Factory
         $server->set([
             'worker_num' => 4,
             'task_worker_num' => 4,
-            'enable_static_handler' => true,
-            'document_root' => '/var/www/html/public',
             'http_parse_post' => false,
             'task_enable_coroutine' => true,
         ]);
