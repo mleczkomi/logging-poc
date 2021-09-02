@@ -42,10 +42,13 @@ services:
     image: docker.elastic.co/logstash/logstash:7.10.2
     volumes:
       - .docker/logstash/pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+      - .docker/logstash/patterns:/patterns
     depends_on:
       - elasticsearch
     profiles:
       - debug
+    command: ['--config.reload.automatic']
+
   kibana:
     image: docker.elastic.co/kibana/kibana:7.10.2
     environment:
